@@ -4,4 +4,5 @@
 # https://help.github.com/articles/ignoring-files#create-a-global-gitignore
 
 /node_modules/
+/bower_components/
 /.vagrant/
