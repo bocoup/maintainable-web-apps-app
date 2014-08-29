@@ -2,5 +2,12 @@
   "extends": "../.jshintrc",
   "node": false,
   "browser": true,
-  "devel": true
+  "devel": true,
+  "globals": {
+    "Backbone": true,
+    "$": true,
+    "Photo": true,
+    "PhotoView": true,
+    "_": true
+  }
 }

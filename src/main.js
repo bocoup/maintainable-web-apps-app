@@ -1,10 +1,19 @@
 (function() {
   'use strict';
 
-  function awesome() {
-    document.body.innerHTML = '<h1>OMG ROOST</h1>';
-  }
+  var me = new Photo({
+    id : 19
+  });
 
-  awesome();
+  var view = new PhotoView({
+    model : me
+  });
 
+  view.$el.appendTo('body');
+
+  me.fetch({
+    success: function() {
+      view.render();
+    }
+  });
 }());
