@@ -1,11 +1,13 @@
-(function() {
+define(function(require) {
   'use strict';
 
+  var Backbone = require('backbone');
+
   var Photo = Backbone.Model.extend({
-    urlRoot : function() {
+    urlRoot: function() {
       return 'http://localhost:8001/photos';
     }
   });
 
-  window.Photo = Photo;
-}());
+  return Photo;
+});

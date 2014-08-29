@@ -1,5 +1,8 @@
-(function() {
+define(function(require) {
   'use strict';
+
+  var Photo = require('modules/photo');
+  var PhotoView = require('modules/view');
 
   var me = new Photo({
     id : 19
@@ -16,4 +19,4 @@
       view.render();
     }
   });
-}());
+});
