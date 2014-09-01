@@ -2,11 +2,10 @@ define(function(require) {
   'use strict';
 
   var Backbone = require('backbone');
-  var $ = require('jquery');
-  var _ = require('underscore');
+  var template = require('tmpl!./detail');
 
   var PhotoView = Backbone.View.extend({
-    template: _.template($('#photo-detail').text()),
+    template: template,
 
     render: function(){
       this.$el.html(
