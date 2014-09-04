@@ -24,6 +24,10 @@ module.exports = function(grunt) {
       files: ['src/**/*.styl'],
       tasks: ['stylus:dev'],
     },
+    jade: {
+      files: ['<%= jade.dev.src %>'],
+      tasks: ['jade:dev'],
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
