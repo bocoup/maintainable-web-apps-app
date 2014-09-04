@@ -18,6 +18,12 @@ module.exports = function(grunt) {
     'Statically analyze the project JavaScript for errors and code style',
     ['jscs', 'jshint']);
 
+  grunt.registerTask('prod',
+    'Compile for production.',
+    [
+      'test-unit', 'clean:prod', 'jade:prod', 'stylus:prod', 'requirejs',
+      'copy:prod', 'server:prod'
+    ]);
   grunt.registerTask('dev',
     'Start a development web server.',
     ['lint', 'clean:prod', 'stylus:dev', 'server:dev', 'watch']);
