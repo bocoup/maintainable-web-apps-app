@@ -2,7 +2,7 @@ define(function(require) {
   'use strict';
 
   var Backbone = require('backbone');
-  var template = require('tmpl!./detail');
+  var template = require('./detail.html');
 
   var PhotoView = Backbone.View.extend({
     template: template,

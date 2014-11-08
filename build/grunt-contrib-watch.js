@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     },
     scripts: {
       files: ['<%= jshint.app.src %>'],
-      tasks: ['jscs', 'jshint:app'],
+      tasks: ['jscs', 'jshint:app', 'browserify'],
     },
     stylus: {
       files: ['src/**/*.styl'],

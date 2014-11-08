@@ -1,5 +1,7 @@
 'use strict';
 
+var browserify = require('browserify-middleware');
+
 module.exports = function(grunt) {
   grunt.config.set('connect', {
     options: {
@@ -11,6 +13,15 @@ module.exports = function(grunt) {
         base: ['prod', 'src', '.'],
         port: '8000',
         hostname: '*',
+        middleware: function(connect, options, middlewares) {
+          var bundle = browserify(__dirname + '/../src/main.js', {
+            transform: ['jstify', 'deamdify', 'debowerify'],
+            external: ['lodash', 'jquery'],
+            debug: true
+          });
+
+          return [['/prod/app.js', bundle]].concat(middlewares);
+        }
       },
     },
     prod: {
