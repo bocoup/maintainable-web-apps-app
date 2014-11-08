@@ -1,25 +1,23 @@
-define(function(require) {
-  'use strict';
+'use strict';
 
-  var Backbone = require('backbone');
-  Backbone.$ = require('jquery');
+var Backbone = require('backbone');
+Backbone.$ = require('jquery');
 
-  var Photo = require('./modules/components/photo/model');
-  var PhotoView = require('./modules/components/photo/detail');
+var Photo = require('./modules/components/photo/model');
+var PhotoView = require('./modules/components/photo/detail');
 
-  var me = new Photo({
-    id : 19
-  });
+var me = new Photo({
+  id : 19
+});
 
-  var view = new PhotoView({
-    model : me
-  });
+var view = new PhotoView({
+  model : me
+});
 
-  view.$el.appendTo('body');
+view.$el.appendTo('body');
 
-  me.fetch({
-    success: function() {
-      view.render();
-    }
-  });
+me.fetch({
+  success: function() {
+    view.render();
+  }
 });

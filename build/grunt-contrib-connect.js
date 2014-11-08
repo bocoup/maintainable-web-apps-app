@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         hostname: '*',
         middleware: function(connect, options, middlewares) {
           var bundle = browserify(__dirname + '/../src/main.js', {
-            transform: ['jstify', 'deamdify', 'debowerify'],
+            transform: ['jstify', 'debowerify'],
             external: ['lodash', 'jquery'],
             debug: true
           });

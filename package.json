@@ -8,7 +8,6 @@
     "install": "bower install"
   },
   "devDependencies": {
-    "deamdify": "^0.1.1",
     "debowerify": "^0.9.1",
     "express": "^4.8.6",
     "grunt": "^0.4.5",
