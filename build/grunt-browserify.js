@@ -3,7 +3,7 @@
 module.exports = function(grunt) {
   grunt.config.set('browserify', {
     options: {
-      transform: ['jstify', 'debowerify'],
+      transform: ['jstify'],
       browserifyOptions: {
         debug: true
       }
