@@ -1,6 +1,6 @@
 'use strict';
 
-var Backbone = require('backbone');
+import Backbone from 'backbone';
 
 var Photo = Backbone.Model.extend({
   urlRoot : function() {
@@ -8,4 +8,4 @@ var Photo = Backbone.Model.extend({
   }
 });
 
-module.exports = Photo;
+export default Photo;

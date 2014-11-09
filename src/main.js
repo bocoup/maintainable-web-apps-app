@@ -1,10 +1,11 @@
 'use strict';
 
-var Backbone = require('backbone');
-Backbone.$ = require('jquery');
+import Backbone from 'backbone';
+import $ from 'jquery';
+import Photo from './modules/components/photo/model';
+import PhotoView from './modules/components/photo/detail';
 
-var Photo = require('./modules/components/photo/model');
-var PhotoView = require('./modules/components/photo/detail');
+Backbone.$ = $;
 
 var me = new Photo({
   id : 19

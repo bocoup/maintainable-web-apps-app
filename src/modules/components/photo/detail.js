@@ -1,7 +1,7 @@
 'use strict';
 
-var Backbone = require('backbone');
-var template = require('./detail.html');
+import Backbone from 'backbone';
+import template from './detail.html!tmpl';
 
 var PhotoView = Backbone.View.extend({
   template: template,
@@ -17,4 +17,4 @@ var PhotoView = Backbone.View.extend({
   }
 });
 
-module.exports = PhotoView;
+export default PhotoView;

@@ -2,6 +2,7 @@
   "extends": "../.jshintrc",
   "node": true,
   "browser": true,
+  "esnext": true,
   "devel": true,
   "globals": {
     "define": true,

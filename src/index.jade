@@ -11,4 +11,22 @@ html
       script.
         document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
-    script(src='/prod/app.js')
+      script(src='/src/traceur.js')
+      script(src='/node_modules/es6-module-loader/dist/es6-module-loader.js')
+      script(src='/node_modules/systemjs/dist/system.js')
+
+      script.
+        System.config({
+          baseURL: '/',
+
+          paths: {
+            backbone: '/node_modules/backbone/backbone.js',
+            jquery: '/node_modules/jquery/dist/jquery.js',
+            underscore: '/node_modules/lodash/dist/lodash.js',
+            tmpl: 'src/plugins/lodash.js'
+          }
+        });
+
+        System.import('src/main').catch(function(ex) {
+          console.log(ex); 
+        });

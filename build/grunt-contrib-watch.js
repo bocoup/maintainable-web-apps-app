@@ -14,11 +14,11 @@ module.exports = function(grunt) {
     },
     build: {
       files: ['<%= jshint.build.src %>'],
-      tasks: ['jscs', 'jshint:build'],
+      tasks: ['jshint:build'],
     },
     scripts: {
       files: ['<%= jshint.app.src %>'],
-      tasks: ['jscs', 'jshint:app', 'browserify'],
+      tasks: ['jshint:app'],
     },
     stylus: {
       files: ['src/**/*.styl'],
