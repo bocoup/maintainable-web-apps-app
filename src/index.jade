@@ -23,10 +23,18 @@ html
             backbone: '/node_modules/backbone/backbone.js',
             jquery: '/node_modules/jquery/dist/jquery.js',
             underscore: '/node_modules/lodash/dist/lodash.js',
-            tmpl: 'src/plugins/lodash.js'
+            lodash: '/node_modules/lodash/dist/lodash.js',
+            tmpl: 'src/plugins/lodash-runtime.js'
           }
         });
 
-        System.import('src/main').catch(function(ex) {
-          console.log(ex); 
-        });
+    else
+      script(src='/traceur-runtime.js')
+      script(src='/es6-module-loader.js')
+      script(src='/system.js')
+      script(src='/app.js')
+
+    script.
+      System.import('src/main').catch(function(ex) {
+        console.log(ex); 
+      });
